@@ -19,7 +19,7 @@ main.c:132:6:UART1_PutStr	16	static
 main.c:138:5:s_i	24	static
 main.c:153:6:i_s	120	static
 main.c:167:6:r_str	32	static
-main.c:184:5:main	64	static
+main.c:184:5:main	24	static
 main.c:300:6:SystemClock_Config	72	static
 main.c:338:13:MX_USART1_UART_Init	56	static
 main.c:395:13:MX_GPIO_Init	40	static

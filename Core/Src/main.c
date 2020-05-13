@@ -233,7 +233,7 @@ int main(void)
 
 	  	  	  	  		  UART1_PutStr(s1);
 	    		 	 	  int i=0, j=0;
-	    	              while((s1[i] > 47) && (s1[i] < 58))
+	    	       /*       while((s1[i] > 47) && (s1[i] < 58))
 	    	              {
 	    	                  s2[i] = s1[i];
 	    	                  i++;
@@ -256,7 +256,7 @@ int main(void)
 	    	              b = s_i(s3);
 	    	              char bdata[20];
 	    	              sprintf(bdata, "b = %d\n", b);
-	    	              UART1_PutStr(bdata);
+	    	              UART1_PutStr(bdata);  */
 
 	    	              switch(op)
 	    	              {
