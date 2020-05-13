@@ -1,0 +1,3 @@
+fifo.c:14:5:fifo_write_byte	24	static
+fifo.c:41:5:fifo_read_byte	16	static
+fifo.c:69:5:fifo_data_available	4	static
