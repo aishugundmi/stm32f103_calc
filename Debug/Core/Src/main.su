@@ -17,10 +17,10 @@ main.c:111:6:uart_send_string	16	static
 main.c:117:6:UART1_PutChar	16	static
 main.c:124:6:UART1_PutStr	16	static
 main.c:129:5:s_i	24	static
-main.c:141:6:i_s	120	static
-main.c:153:6:r_str	32	static
-main.c:165:5:main	16	static
-main.c:294:6:SystemClock_Config	72	static
-main.c:329:13:MX_USART1_UART_Init	56	static
-main.c:386:13:MX_GPIO_Init	40	static
-main.c:414:6:Error_Handler	4	static
+main.c:142:6:i_s	120	static
+main.c:154:6:r_str	32	static
+main.c:166:5:main	80	static
+main.c:306:6:SystemClock_Config	72	static
+main.c:341:13:MX_USART1_UART_Init	56	static
+main.c:398:13:MX_GPIO_Init	40	static
+main.c:426:6:Error_Handler	4	static

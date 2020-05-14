@@ -135,6 +135,7 @@ int s_i(uint8_t *str) {
 	}
 	//     printf("%d\n", num);
 
+
 	return num;
 }
 
@@ -190,13 +191,14 @@ int main(void) {
 	LL_USART_EnableIT_RXNE(USART1);
 	/* USER CODE END 2 */
 
-//  uart_send_string("histm\n");
-	UART1_PutStr("histm\n");
+
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 	while (1) {
 		/* USER CODE END WHILE */
 		memset(s1, 0, sizeof(s1));
+		memset(s2, 0, sizeof(s2));
+		memset(s3, 0, sizeof(s3));
 
 		while (!fifo_data_available()) {
 			; //wait loop for first byte of data to get filled in the fifo.
@@ -230,9 +232,9 @@ int main(void) {
 
 		///we are here because we received a valid string with proper \n ending. We will process the sting now.
 
-		UART1_PutStr(s1);
-		//int i = 0, j = 0;
-		/*       while((s1[i] > 47) && (s1[i] < 58))
+
+		 int i = 0, j = 0;
+         while((s1[i] > 47) && (s1[i] < 58))
 		 {
 		 s2[i] = s1[i];
 		 i++;
@@ -243,6 +245,8 @@ int main(void) {
 		 UART1_PutStr(adata);
 
 		 op = s1[i];
+		 UART1_PutChar(op);
+		 UART1_PutStr("\n");
 
 		 i++;
 
@@ -255,32 +259,40 @@ int main(void) {
 		 b = s_i(s3);
 		 char bdata[20];
 		 sprintf(bdata, "b = %d\n", b);
-		 UART1_PutStr(bdata);  */
+		 UART1_PutStr(bdata);
 
 		switch (op) {
+		char cdata[20];
 		case '+':
 			c = a + b;
-			//  uprintf(c);
+
+			sprintf(cdata, "sum = %d\n", c);
+			UART1_PutStr(cdata);
 
 			break;
 		case '-':
 			c = a - b;
-			//   uprintf(c);
+			sprintf(cdata, "difference = %d\n", c);
+			UART1_PutStr(cdata);
 
 			break;
 		case '*':
 			c = a * b;
-			//   uprintf(c);
+			sprintf(cdata, "product = %d\n", c);
+			UART1_PutStr(cdata);
 
 			break;
 		case '/':
 			c = a / b;
-			//   uprintf(c);
+			sprintf(cdata, "quotient = %d\n", c);
+			UART1_PutStr(cdata);
 
 			break;
 		default:
 			break;
 		}
+
+		UART1_PutStr("\n");
 
 		/* USER CODE BEGIN 3 */
 	}
