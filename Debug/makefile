@@ -40,8 +40,8 @@ OBJCOPY_BIN += \
 all: 7\ uart_calc_LL.elf secondary-outputs
 
 # Tool invocations
-7\ uart_calc_LL.elf: $(OBJS) $(USER_OBJS) C:\Users\Aishwarya\Desktop\stm\7\ uart_calc_LL\STM32F103C8TX_FLASH.ld
-	arm-none-eabi-gcc -o "7 uart_calc_LL.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\Aishwarya\Desktop\stm\7 uart_calc_LL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7 uart_calc_LL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+7\ uart_calc_LL.elf: $(OBJS) $(USER_OBJS) E:\Data\ Backup\ from\ old\ Laptop\VINOD\ BACKUP\stm_calc\stm32f103_calc\STM32F103C8TX_FLASH.ld
+	arm-none-eabi-gcc -o "7 uart_calc_LL.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"E:\Data Backup from old Laptop\VINOD BACKUP\stm_calc\stm32f103_calc\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7 uart_calc_LL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
